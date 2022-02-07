@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Darpan</title>
+</head>
+<body>
+    <!-- loading bar -->
+    <div id="loader-con">
+      <div id="loader"></div>
+    </div>
+    <!-- loading bar -->
+
+    <!-- ThreeJS sphere coding start -->
+    <main id="body-bg">
+        <canvas class="webgl" id="black-ball"></canvas>      
+    </main>
+    <main id="body-bg">
+        <canvas class="webgl2" id="white-ball"></canvas>      
+    </main>
+    <main id="body-bg-i">     
+    </main>
+    <!-- ThreeJS sphere coding end -->
+    
+    <!-- menu bar heading start -->
+    <div id="menu">
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="">WORK</a></li>
+          <li><a href="">ABOUT ME</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+    </div>
+    <header>
+        <ul class="desk-menu">
+        <div class="brand-name">
+            <li><a href="#">DARPAN</a></li>
+        </div>
+        <div class="top-right-nav">
+            <div id="menu-bar">
+                <li class="menubar-top"></li>
+                <li class="menubar-bottom"></li>
+            </div>
+        </div>
+        
+        </ul>
+    </header>
+    <ul class="social-media">
+        <li><a href="https://www.facebook.com/" target="_blank"><img src="img/socialMedia/facebook.svg" alt="facebook"></a></li>
+        <li><a href="https://www.linkedin.com/in/darpanarayan-bahadur-53a967223/" target="_blank"><img src="img/socialMedia/linkedin.svg" alt="linkedin"></a></li>
+        <li><a href="https://github.com/SkullCreek" target="_blank"><img src="img/socialMedia/github.svg" alt="github"></a></li>
+        <li><a href="#blog-head" target="_blank"><img src="img/socialMedia/twitter.svg" alt="twitter"></a></li>
+    </ul>
+    <!-- menu bar heading end -->
+    <!-- <ul id="indicator">
+        <li id="first-bar"></li>
+        <li id="sec-bar"></li>
+        <li id="third-bar"></li>
+        <li id="forth-bar"></li>
+    </ul> -->
+    <!-- main content coding start -->
+    <div id="fullpage">
+        <!-- Hero section start -->
+        <section class="section" id="hero-sec">
+            <aside id="scrollbar-ind">
+              <p>SCROLLDOWN</p>
+              <div></div>
+            </aside>
+            <div id="hero-sec-con">
+              <aside id="name">
+                <p>Darpan Bahadur</p>
+                <h2>web designer / <br>web  developer</h2>
+              </aside>
+              <h1 id="portfolio-heading">PORTFOLIO</h1>
+            </div>
+          </section>
+        <!-- Hero section end -->
+
+        <!-- work section start -->
+        <section class="section" id="work-sec">
+            <div id="sub-wrk-sec">
+              <aside id="wrk-left">
+                <h1>SPECFICO</h1>
+                <p id="website">website</p>
+                <p id="des">Store your playlist, business, contacts, notes.</p>
+                <button>Show me more</button>
+              </aside>
+              <aside id="wrk-right"><img src="img/sec/work.jpg" alt=""></aside>
+            </div>
+            <h1 id="number">01</h1>
+          </section>
+        <!-- work section end -->
+
+    <!-- main content coding end -->
+
+    </main>
+    <!-- main content coding start -->
+
+
+
+
+
+
+
+
+
+      
+
+      <!-- Code for Threejs -->
+
+
+    <script>
+        var myFullpage = new fullpage('#fullpage', {
+        //Navigation
+        menu: '#menu',
+        lockAnchors: false,
+        anchors:['firstPage', 'secondPage'],
+        navigation: true,
+        navigationPosition: 'left',
+        navigationTooltips: ['Home', 'Work'],
+        showActiveTooltip: false,
+        slidesNavigation: false,
+        slidesNavPosition: 'bottom',
+
+        //Scrolling
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        continuousHorizontal: false,
+        scrollHorizontally: false,
+        interlockedSlides: false,
+        dragAndMove: false,
+        offsetSections: false,
+        resetSliders: false,
+        fadingEffect: false,
+        normalScrollElements: '#element1, .element2',
+        scrollOverflow: false,
+        scrollOverflowReset: false,
+        scrollOverflowOptions: null,
+        touchSensitivity: 15,
+        bigSectionsDestination: null,
+
+        //Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //Design
+        controlArrows: true,
+        verticalCentered: true,
+        // sectionsColor : ['#ccc', '#fff'],
+        // paddingTop: '3em',
+        paddingBottom: '80px',
+        // fixedElements: '#header, .footer',
+        responsiveWidth: 0,
+        responsiveHeight: 0,
+        responsiveSlides: false,
+        parallax: false,
+        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+        dropEffect: false,
+        dropEffectOptions: { speed: 40000, color: '#F82F4D', zIndex: 9},
+        waterEffect: false,
+        waterEffectOptions: { animateContent: true, animateOnMouseMove: true},
+        cards: false,
+        cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+
+        //Custom selectors
+        sectionSelector: '.section',
+        slideSelector: '.slide',
+
+        lazyLoading: true,
+
+        //events
+        onLeave: function(origin, destination, direction){},
+        afterLoad: function(origin, destination, direction){},
+        afterRender: function(){},
+        afterResize: function(width, height){},
+        afterReBuild: function(){},
+        afterResponsive: function(isResponsive){},
+        afterSlideLoad: function(section, origin, destination, direction){},
+        onSlideLeave: function(section, origin, destination, direction){}
+    });
+    </script>
+
+    <script type="module">
+
+        // Find the latest version by visiting https://cdn.skypack.dev/three.
+      
+        import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
+        // import * as dat from 'dat.gui'
+
+        // const gui = new dat.GUI();
+
+        //1st sphere
+
+        const canvas = document.querySelector('canvas.webgl');
+
+        //loading
+        const textureLoader = new THREE.TextureLoader();
+
+        const normalTexture = textureLoader.load('img/NormalMap.jpg');
+
+        // Scene
+        const scene = new THREE.Scene();
+
+        // Objects
+        const geometry = new THREE.SphereBufferGeometry( .5, 70, 70 );
+
+        // Materials
+
+        const material = new THREE.MeshStandardMaterial()
+        material.metalness = .7;
+        material.roughness = .9;
+        material.normalMap = normalTexture;
+        material.color = new THREE.Color(0x131312);
+
+        // Mesh
+        const sphere = new THREE.Mesh(geometry,material)
+        scene.add(sphere)
+
+        // Lights
+
+        // const pointLight = new THREE.PointLight(0xffffff, .5)
+        // pointLight.position.x = 2
+        // pointLight.position.y = 3
+        // pointLight.position.z = 4
+        // scene.add(pointLight)
+
+        const pointLight2 = new THREE.PointLight(0x1C433C, 6.6);
+        pointLight2.position.set(1.2,1.14,-0.1);
+        pointLight2.intensity = 6.6;
+        scene.add(pointLight2);
+
+        // gui.add(pointLight2.position, 'y').min(-3).max(3).step(0.01);
+        // gui.add(pointLight2.position, 'x').min(-3).max(3).step(0.01);
+        // gui.add(pointLight2.position, 'z').min(-3).max(3).step(0.01);
+        // gui.add(pointLight2, 'intensity').min(0).max(10);
+
+        const pointLight3 = new THREE.PointLight(0x272971, 6.6);
+        pointLight3.position.set(-1.48,1.03,0.37);
+        pointLight3.intensity = 6.6;
+        scene.add(pointLight3);
+
+        // gui.add(pointLight3.position, 'y').min(-3).max(10).step(0.01);
+        // gui.add(pointLight3.position, 'x').min(-10).max(0).step(0.01);
+        // gui.add(pointLight3.position, 'z').min(-10).max(3).step(0.01);
+        // gui.add(pointLight3, 'intensity').min(0).max(10).step(0.01);
+
+
+        /**
+         * Sizes
+         */
+        const sizes = {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+
+        window.addEventListener('resize', () =>
+        {
+            // Update sizes
+            sizes.width = window.innerWidth
+            sizes.height = window.innerHeight
+
+            // Update camera
+            camera.aspect = sizes.width / sizes.height
+            camera.updateProjectionMatrix()
+
+            // Update renderer
+            renderer.setSize(sizes.width, sizes.height)
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        })
+
+        /**
+         * Camera
+         */
+        // Base camera
+        const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+        camera.position.x = 0
+        camera.position.y = 0
+        camera.position.z = .92
+        scene.add(camera)
+
+        // Controls
+        // const controls = new OrbitControls(camera, canvas)
+        // controls.enableDamping = true
+
+        /**
+         * Renderer
+         */
+        const renderer = new THREE.WebGLRenderer({
+            canvas: canvas,
+            alpha: true
+        })
+        renderer.setSize(sizes.width, sizes.height)
+        renderer.setPixelRatio(devicePixelRatio)
+
+        //1st sphere
+
+        /**
+         * Animate
+         */
+
+        document.addEventListener('mousemove', onDocumentMouseMove);
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        let targetX = 0;
+        let targetY = 0;
+
+        const windowX = window.innerWidth / 2;
+        const windowY = window.innerHeight / 2;
+        function onDocumentMouseMove(event) {
+        mouseX = (event.clientX - windowX);
+        mouseY = (event.clientY - windowY);
+        }
+
+        const clock = new THREE.Clock()
+
+        const tick = () =>
+        {
+
+            targetX = mouseX * .001;
+            targetY = mouseY * .001;
+            const elapsedTime = clock.getElapsedTime()
+
+            // Update objects
+            sphere.rotation.y = .5 * elapsedTime
+            sphere.rotation.x = .5 * elapsedTime
+            sphere.rotation.z = .5 * elapsedTime
+            sphere.rotation.y += .5 * (targetX - sphere.rotation.y);
+            
+
+            // Update Orbital Controls
+            // controls.update()
+
+            // Render
+            renderer.render(scene, camera)
+
+            // Call tick again on the next frame
+            window.requestAnimationFrame(tick)
+        }
+
+        tick()
+
+    </script>
+    <script type="module">
+        // Find the latest version by visiting https://cdn.skypack.dev/three.
+      
+        import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
+        // import * as dat from 'dat.gui'
+
+        // const gui = new dat.GUI();
+
+        //1st sphere
+
+        const canvas2 = document.querySelector('canvas.webgl2');
+
+        //loading
+        const textureLoader2 = new THREE.TextureLoader();
+
+        const normalTexture2 = textureLoader2.load('img/NormalMap.jpg');
+
+        // Scene
+        const scene2 = new THREE.Scene();
+
+        // Objects
+        const geometry2 = new THREE.SphereBufferGeometry( .5, 70, 70 );
+
+        // Materials
+
+        const material2 = new THREE.MeshStandardMaterial()
+        material2.metalness = .7;
+        material2.roughness = .9;
+        material2.normalMap = normalTexture2;
+        material2.color = new THREE.Color(0xECECEC);
+
+        // Mesh
+        const sphere2 = new THREE.Mesh(geometry2,material2)
+        scene2.add(sphere2)
+
+        // Lights
+
+        const pointLight4 = new THREE.PointLight(0xffffff, 1)
+        pointLight4.position.x = 2
+        pointLight4.position.y = 3
+        pointLight4.position.z = 4
+        scene2.add(pointLight4)
+
+        const pointLight = new THREE.PointLight(0x1C433C, 6.6);
+        pointLight.position.set(1.2,1.14,-0.1);
+        scene2.add(pointLight);
+
+        const pointLight2 = new THREE.PointLight(0x1C433C, .1);
+        pointLight2.position.set(1.2,1.14,-0.1);
+        pointLight2.intensity = .1;
+        scene2.add(pointLight2);
+
+        // gui.add(pointLight2.position, 'y').min(-3).max(3).step(0.01);
+        // gui.add(pointLight2.position, 'x').min(-3).max(3).step(0.01);
+        // gui.add(pointLight2.position, 'z').min(-3).max(3).step(0.01);
+        // gui.add(pointLight2, 'intensity').min(0).max(10);
+
+        const pointLight3 = new THREE.PointLight(0xffffff, 1);
+        pointLight3.position.set(-1.48,1.03,0.37);
+        scene2.add(pointLight3);
+
+        // gui.add(pointLight3.position, 'y').min(-3).max(10).step(0.01);
+        // gui.add(pointLight3.position, 'x').min(-10).max(0).step(0.01);
+        // gui.add(pointLight3.position, 'z').min(-10).max(3).step(0.01);
+        // gui.add(pointLight3, 'intensity').min(0).max(10).step(0.01);
+
+
+        /**
+         * Sizes
+         */
+        const sizes2 = {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+
+        window.addEventListener('resize', () =>
+        {
+            // Update sizes
+            sizes2.width = window.innerWidth
+            sizes2.height = window.innerHeight
+
+            // Update camera
+            camera.aspect = sizes2.width / sizes2.height
+            camera.updateProjectionMatrix()
+
+            // Update renderer
+            renderer2.setSize(sizes2.width, sizes2.height)
+            renderer2.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        })
+
+        /**
+         * Camera
+         */
+        // Base camera
+        const camera = new THREE.PerspectiveCamera(75, sizes2.width / sizes2.height, 0.1, 100)
+        camera.position.x = 0
+        camera.position.y = 0
+        camera.position.z = .92
+        scene2.add(camera)
+
+        // Controls
+        // const controls = new OrbitControls(camera, canvas)
+        // controls.enableDamping = true
+
+        /**
+         * Renderer
+         */
+        const renderer2 = new THREE.WebGLRenderer({
+            canvas: canvas2,
+            alpha: true
+        })
+        renderer2.setSize(sizes2.width, sizes2.height)
+        renderer2.setPixelRatio(devicePixelRatio)
+
+        //1st sphere
+
+        /**
+         * Animate
+         */
+
+        document.addEventListener('mousemove', onDocumentMouseMove);
+
+        let mouse_X = 0;
+        let mouse_Y = 0;
+
+        let target_X = 0;
+        let target_Y = 0;
+
+        const window_X = window.innerWidth / 2;
+        const window_Y = window.innerHeight / 2;
+        function onDocumentMouseMove(event) {
+        mouse_X = (event.clientX - window_X);
+        mouse_Y = (event.clientY - window_Y);
+        }
+
+        const clock = new THREE.Clock()
+
+        const ticks = () =>
+        {
+
+            target_X = mouse_X * .001;
+            target_Y = mouse_Y * .001;
+            const elapsedTime = clock.getElapsedTime()
+
+            // Update objects
+            sphere2.rotation.y = .5 * elapsedTime
+            sphere2.rotation.x = .5 * elapsedTime
+            // sphere2.rotation.z = .5 * elapsedTime
+
+            sphere2.rotation.y += .5 * (target_X - sphere2.rotation.y);
+            // sphere2.rotation.x += .5 * (target_X - sphere2.rotation.x);
+            // sphere2.rotation.z += .5 * (target_X - sphere2.rotation.z);
+
+            // Update Orbital Controls
+            // controls.update()
+
+            // Render
+            renderer2.render(scene2, camera)
+
+            // Call tick again on the next frame
+            window.requestAnimationFrame(ticks)
+        }
+
+        ticks()
+
+        // function animate(){
+        //   requestAnimationFrame(animate);
+        //   renderer.render(scene, camera);
+        // }
+        // animate();
+    </script>
+    <!-- Code for Threejs -->
+    <script src="js/main.js"></script>
+</body>
+</html>

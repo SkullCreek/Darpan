@@ -1,0 +1,100 @@
+#loader-con{
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+#loader{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--light);
+    animation: beat 2s infinite;
+    transition: all 2s;
+}
+
+@keyframes beat {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.5);}
+    100%{transform: scale(1);}
+}
+
+@keyframes disapere{
+    0%{transform: scale(1);}
+    100%{transform: scale(5);}
+}
+
+@keyframes fade {
+    0%{opacity: 1;}
+    100%{opacity: 0;display: none;}
+}
+
+#menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(50px);
+    display: none;
+    place-items: center;
+    ul{
+        padding-top: 10rem;
+        li{
+            text-align: center;
+            padding-bottom: 4.5rem;
+            a{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 10rem;
+                position: relative;
+            }
+            a::before{
+                content: "";
+                position: absolute;
+                background-color: var(--light);
+                width: 0%;
+                top: 46.5%;
+                left: 0;
+                height: 1rem;
+
+            }
+            a:hover::before{
+                width: 100%;
+                transition: .4s;
+            }
+        }
+    }
+}
+
+#light-dark-mode{
+    width: 5rem;
+    background-color: var(--light);
+    padding: .5rem;
+    border-top-left-radius: 48%;
+    border-bottom-left-radius: 48%;
+
+    position: fixed;
+    right: 0;
+    button{
+        padding: 1rem;
+        border-radius: 50%;
+        background-color: var(--dark);
+        outline: none;
+        border: none;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        
+    }
+}

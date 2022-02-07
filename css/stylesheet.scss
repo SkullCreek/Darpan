@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --dark: #161313;
+    --light: #ECECEC;
+    --Bloosm: #ff1a47;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html,
+body{
+    
+    color: var(--light);
+}
+
+body{
+    background-color: var(--dark);
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+#body-bg{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    .webgl{
+        transform: translate(-20%, -3%);
+    }
+    
+    .webgl2{
+        transform: translate(46%, 30%);
+    }
+}
+
+ul{
+    
+    list-style: none;
+    a{
+        text-decoration: none;
+        color: var(--light);
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+#fullpage{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    // scroll-snap-type: y mandatory;
+    // overflow-y: scroll;
+    // section{
+    //     scroll-snap-align: start;
+    // }
+}
+#fp-nav{
+    margin-left: 2rem!important;
+}
+span{
+    background-color: var(--light)!important;
+}
+@import "loading";
+@import "header";
+@import "heroSec";
+@import "workSec";
