@@ -1,0 +1,68 @@
+#collab-sec{
+    width: 100%;
+    height: 100vh;
+    padding: 14.2rem 11.3rem 10.2rem 19.5rem;
+    position: relative;
+}
+
+#sub-col-sec{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    #col-left{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: translate(2rem,-2rem);
+        pre{
+            word-wrap: none;
+            width: 20rem;
+            font-weight: 700;
+            font-size: 9.5rem;
+            padding-bottom: 4rem;
+        }
+        a{
+            width: 47rem;
+            font-weight: 400;
+            font-size: 3rem;
+            padding-bottom: 2rem;
+        }
+        button{
+            width: 23.3rem;
+            border-radius: 50px;
+            padding: 2rem 4rem;
+            background-color: var(--Bloosm);
+            border: none;
+            font-weight: 600;
+            font-size: 2rem;
+            letter-spacing: -0.035em;
+            color: var(--light);
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #ff375f;
+        }
+    }
+    #col-right{
+        width: 70%;
+        display: flex;
+        justify-content: end;
+        z-index: -1;
+        img{
+            width: 70.6rem;
+
+        }
+    }
+}
+#number{
+    position: absolute;
+    bottom: 2rem;
+    right: 6rem;
+    font-weight: bold;
+    font-size: 20rem;
+}

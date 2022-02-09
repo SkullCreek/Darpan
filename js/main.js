@@ -74,6 +74,22 @@ const scroll_bg = () => {
 scroll_bg();
 
 
+const theme = () => {
+    let theme_btn = document.getElementById("light-dark-mode-btn");
+    theme_btn.onclick = () => {
+        let theme_icon = document.getElementById("theme-icon");
+        document.documentElement.style.setProperty('--dark', '#ECECEC');
+        document.documentElement.style.setProperty('--light', '#161313');
+        theme_icon.src = "img/icons/dark.svg";
+        let black = document.getElementById("black-ball");
+        let white = document.getElementById("white-ball");
+        black.style.transition = "transform 1s ease-in-out";
+        black.style.transform = `translate(46%, 30%)`;
+        white.style.transition = "transform 1s ease-in-out";
+        white.style.transform = `translate(-20%, -3%)`;
+    }
+}
 
+theme();
 
 

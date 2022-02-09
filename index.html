@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Darpan</title>
 </head>
-<body>
+<body onselectstart="return false;">
     <!-- loading bar -->
     <div id="loader-con">
       <div id="loader"></div>
@@ -63,6 +63,13 @@
         <li id="third-bar"></li>
         <li id="forth-bar"></li>
     </ul> -->
+
+    <!-- light dark mode -->
+    <div id="light-dark-mode">
+        <button id="light-dark-mode-btn"><img id="theme-icon" src="img/icons/light.svg" alt="mode"></button>
+    </div>
+    <!-- light dark mode -->
+
     <!-- main content coding start -->
     <div id="fullpage">
         <!-- Hero section start -->
@@ -93,8 +100,45 @@
               <aside id="wrk-right"><img src="img/sec/work.jpg" alt=""></aside>
             </div>
             <h1 id="number">01</h1>
-          </section>
+        </section>
         <!-- work section end -->
+    
+        <!-- About me section start -->
+        <section class="section" id="about-sec">
+            <div id="sub-abt-sec">
+              <aside id="abt-left">
+                <pre>About Me</pre>
+                <p id="des">I have a passion for creating websites with new Technologies.</p>
+                <button>Show me more</button>
+              </aside>
+              <aside id="abt-right"><img src="img/sec/aboutme.jpg" alt=""></aside>
+            </div>
+            <h1 id="number">02</h1>
+        </section>
+        <!-- About me section end -->
+
+        <!-- collab section start -->
+        <section class="section" id="collab-sec">
+            <div id="sub-col-sec">
+                <aside id="col-left">
+                <pre>Let’s Work
+TOGETHER</pre>
+                <a id="des">darpan.bahadur.2001@gmail.com</a>
+                <p>
+                    <ul class="social-media-collab">
+                        <li><a href="https://www.facebook.com/" target="_blank"><img src="img/socialMedia/facebook.svg" alt="facebook"></a></li>
+                        <li><a href="https://www.linkedin.com/in/darpanarayan-bahadur-53a967223/" target="_blank"><img src="img/socialMedia/linkedin.svg" alt="linkedin"></a></li>
+                        <li><a href="https://github.com/SkullCreek" target="_blank"><img src="img/socialMedia/github.svg" alt="github"></a></li>
+                        <li><a href="#blog-head" target="_blank"><img src="img/socialMedia/twitter.svg" alt="twitter"></a></li>
+                    </ul>
+                </p>
+                <button>Show me more</button>
+                </aside>
+                <aside id="col-right"><img src="img/sec/collab.jpg" alt=""></aside>
+            </div>
+            <h1 id="number">03</h1>
+        </section>
+        <!-- collab section end -->
 
     <!-- main content coding end -->
 
@@ -119,10 +163,10 @@
         //Navigation
         menu: '#menu',
         lockAnchors: false,
-        anchors:['firstPage', 'secondPage'],
+        anchors:['firstPage', 'secondPage', 'thirdPage', 'forthPage'],
         navigation: true,
         navigationPosition: 'left',
-        navigationTooltips: ['Home', 'Work'],
+        navigationTooltips: ['Home', 'Work', 'About Me', 'Contact'],
         showActiveTooltip: false,
         slidesNavigation: false,
         slidesNavPosition: 'bottom',

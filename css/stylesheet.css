@@ -224,7 +224,9 @@ span {
   border-top-left-radius: 48%;
   border-bottom-left-radius: 48%;
   position: fixed;
+  top: 14rem;
   right: 0;
+  z-index: 1;
 }
 
 #light-dark-mode button {
@@ -497,6 +499,205 @@ li {
 }
 
 #sub-wrk-sec #wrk-right img {
+  width: 70.6rem;
+}
+
+#number {
+  position: absolute;
+  bottom: 2rem;
+  right: 6rem;
+  font-weight: bold;
+  font-size: 20rem;
+}
+
+#about-sec {
+  width: 100%;
+  height: 100vh;
+  padding: 14.2rem 11.3rem 10.2rem 19.5rem;
+  position: relative;
+}
+
+#sub-abt-sec {
+  width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#sub-abt-sec #abt-left {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transform: translate(2rem, -2rem);
+          transform: translate(2rem, -2rem);
+}
+
+#sub-abt-sec #abt-left pre {
+  word-wrap: none;
+  width: 20rem;
+  font-weight: 700;
+  font-size: 9.5rem;
+  padding-bottom: 7rem;
+}
+
+#sub-abt-sec #abt-left p {
+  width: 47rem;
+  font-weight: 400;
+  font-size: 3rem;
+  padding-bottom: 6rem;
+}
+
+#sub-abt-sec #abt-left button {
+  width: 23.3rem;
+  border-radius: 50px;
+  padding: 2rem 4rem;
+  background-color: var(--Bloosm);
+  border: none;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -0.035em;
+  color: var(--light);
+  cursor: pointer;
+}
+
+#sub-abt-sec #abt-left button:hover {
+  background-color: #ff375f;
+}
+
+#sub-abt-sec #abt-right {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  z-index: -1;
+}
+
+#sub-abt-sec #abt-right img {
+  width: 70.6rem;
+}
+
+#number {
+  position: absolute;
+  bottom: 2rem;
+  right: 6rem;
+  font-weight: bold;
+  font-size: 20rem;
+}
+
+.social-media-collab {
+  width: 16.5rem;
+  margin-right: 6.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 6rem;
+}
+
+.social-media-collab li:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#collab-sec {
+  width: 100%;
+  height: 100vh;
+  padding: 14.2rem 11.3rem 10.2rem 19.5rem;
+  position: relative;
+}
+
+#sub-col-sec {
+  width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#sub-col-sec #col-left {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transform: translate(2rem, -2rem);
+          transform: translate(2rem, -2rem);
+}
+
+#sub-col-sec #col-left pre {
+  word-wrap: none;
+  width: 20rem;
+  font-weight: 700;
+  font-size: 9.5rem;
+  padding-bottom: 4rem;
+}
+
+#sub-col-sec #col-left a {
+  width: 47rem;
+  font-weight: 400;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+#sub-col-sec #col-left button {
+  width: 23.3rem;
+  border-radius: 50px;
+  padding: 2rem 4rem;
+  background-color: var(--Bloosm);
+  border: none;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -0.035em;
+  color: var(--light);
+  cursor: pointer;
+}
+
+#sub-col-sec #col-left button:hover {
+  background-color: #ff375f;
+}
+
+#sub-col-sec #col-right {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  z-index: -1;
+}
+
+#sub-col-sec #col-right img {
   width: 70.6rem;
 }
 

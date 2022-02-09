@@ -85,7 +85,9 @@
     border-bottom-left-radius: 48%;
 
     position: fixed;
+    top: 14rem;
     right: 0;
+    z-index: 1;
     button{
         padding: 1rem;
         border-radius: 50%;
