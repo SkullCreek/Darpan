@@ -1,12 +1,10 @@
 window.onload = () => {
     let loader_con = document.getElementById("loader-con");
     let load = document.getElementById("loader");
-    load.style.padding = "10000%";
-    load.style.animation = "disapere 5s";
-    loader_con.style.animation = "fade .5s";
-    setTimeout(function(){
-        loader_con.style.display = "none";
-    },500);
+    var t1 = gsap.timeline();
+    t1.to('#loader', {scale: 400, duration: .8});
+    load.style.animation = "none";
+    t1.to('#loader-con', {display: 'none', duration: 0});
 }
 
 
@@ -91,5 +89,4 @@ const theme = () => {
 }
 
 theme();
-
 
