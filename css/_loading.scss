@@ -16,9 +16,15 @@
     height: 60px;
     border-radius: 50%;
     position: absolute;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
     background-color: var(--light);
     animation: beat 2s infinite;
     transition: all 2s;
+    h1{
+        display: none;
+    }
 }
 
 @keyframes beat {
@@ -101,3 +107,17 @@
         
     }
 }
+
+.ball {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    border: 3px solid #ff1a47;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+  }

@@ -92,11 +92,19 @@ span {
   height: 60px;
   border-radius: 50%;
   position: absolute;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
   background-color: var(--light);
   -webkit-animation: beat 2s infinite;
           animation: beat 2s infinite;
   -webkit-transition: all 2s;
   transition: all 2s;
+}
+
+#loader h1 {
+  display: none;
 }
 
 @-webkit-keyframes beat {
@@ -242,6 +250,21 @@ span {
   cursor: pointer;
 }
 
+.ball {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border: 3px solid #ff1a47;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -376,6 +399,7 @@ li {
 
 #hero-sec #hero-sec-con {
   width: 100%;
+  overflow: hidden;
 }
 
 #hero-sec #hero-sec-con #name {
