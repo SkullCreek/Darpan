@@ -4,7 +4,7 @@
 :root {
     --dark: #161313;
     --light: #ECECEC;
-    --Bloosm: #ff1a47;
+    --Bloosm: #FF8A00;
 }
 
 *{
@@ -28,6 +28,8 @@ body{
     background-color: var(--dark);
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
+    --left: white;
+    --right: #444;
 }
 
 #body-bg{
@@ -79,3 +81,4 @@ span{
 @import "workSec";
 @import "aboutMeSec";
 @import "collab";
+@import "responsive";

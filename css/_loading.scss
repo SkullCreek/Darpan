@@ -65,21 +65,29 @@
                 font-weight: 600;
                 font-size: 10rem;
                 position: relative;
+                background-image: linear-gradient(
+                    90deg,
+                    var(--left) 0%,
+                    var(--left) 0%,
+                    var(--right) 0%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
-            a::before{
-                content: "";
-                position: absolute;
-                background-color: var(--light);
-                width: 0%;
-                top: 46.5%;
-                left: 0;
-                height: 1rem;
+            // a::before{
+            //     content: "";
+            //     position: absolute;
+            //     background-color: var(--light);
+            //     width: 0%;
+            //     top: 46.5%;
+            //     left: 0;
+            //     height: 1rem;
 
-            }
-            a:hover::before{
-                width: 100%;
-                transition: .4s;
-            }
+            // }
+            // a:hover::before{
+            //     width: 100%;
+            //     transition: .4s;
+            // }
         }
     }
 }
@@ -116,7 +124,7 @@
     left: 0;
     display: grid;
     place-items: center;
-    border: 3px solid #ff1a47;
+    border: 3px solid #ff9011;
     border-radius: 50%;
     pointer-events: none;
     z-index: 1000;

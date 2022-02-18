@@ -2,14 +2,15 @@ window.onload = () => {
     let loader_con = document.getElementById("loader-con");
     let load = document.getElementById("loader");
     var t1 = gsap.timeline();
+    gsap.ticker.lagSmoothing();
     t1.to('#loader', {scale: 400, duration: .8});
     load.style.animation = "none";
     t1.to('#loader-con', {duration: 1.5, ease: "expo.out", y: -innerHeight});
     t1.to('#loader-con', {display: 'none', duration:0});
-    t1.from("#name", {duration: .5, ease: "back.out(1)", x:-400}, "-=1");
-    t1.from(".webgl", {duration: .8, ease: "back.out(1)", x:-1200}, "-=1");
-    t1.from(".webgl2", {duration: .8, ease: "back.out(1)", x:1200}, "-=1");
-    t1.from("#portfolio-heading", {duration: .5, ease: "back.out(1)", x:1200}, "-=1");
+    t1.from("#name", {duration: 1, ease: "back.out(1)", xPercent:-100, opacity:0}, 1);
+    t1.from(".webgl", {duration: 1.4, ease: "back.out(.2)", xPercent:-100, opacity:0}, "-=1");
+    t1.from(".webgl2", {duration: 1.4, ease: "back.out(.2)", xPercent:100, opacity:0}, "-=1");
+    t1.from("#portfolio-heading", {duration: 1, ease: "back.out(1)", xPercent:100}, 1);
     // t1.from("#scrollbar-ind", {duration: .1, ease: "back.out(1)", y:100}, "-=.5");
 
 }
@@ -19,8 +20,27 @@ const menu = () => {
     const menu_bar = document.getElementById("menu-bar");
     menu_bar.onclick = () => {
         var t2 = gsap.timeline();
-        t2.from("#menu", {duration: .5,ease: "circ.out", y: -1000});
-        t2.from("#menu ul", {duration: .2, x: -1500});
+        t2.from("#menu", {duration: .5,ease: "circ.out", yPercent: -100});
+        t2.from("#menu ul", {duration: .2, xPercent: -200});
+        const items = document.querySelectorAll(".item");
+        gsap.defaults({ duration: 0.3 });
+
+        items.forEach(function (item, index) {
+          const tl = gsap
+            .timeline({ paused: true })
+            .to(item.querySelector(".text"), {
+              backgroundImage:"linear-gradient(90deg, var(--left) 0%, var(--left) 100%, var(--right) 100%)",
+              duration: 0.5,
+              ease: "power1",
+              stagger: {
+                each: 0.1,
+                ease: "power2.out"
+              }
+            })
+          item.addEventListener("mouseenter", () => tl.play());
+          item.addEventListener("mouseleave", () => tl.reverse());
+        });
+
         let menu_sec = document.getElementById("menu");
         let menubar_top = document.getElementsByClassName("menubar-top");
         let menubar_bottom = document.getElementsByClassName("menubar-bottom");
@@ -129,3 +149,34 @@ gsap.ticker.add(() => {
   xSet(pos.x);
   ySet(pos.y);
 });
+
+var view = document.querySelector("#portfolio-heading");
+
+var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+var word = [0,0,0,0,0,0,0,0,0];
+
+var tl = new TimelineMax({ onUpdate: update })
+  .to(word, 2, { "0": 26 * 3 + 15  }, 0)
+  .to(word, 3, { "1": 26 * 3 + 14 }, 0)
+  .to(word, 4, { "2": 26 * 3 + 17  }, 0)
+  .to(word, 5, { "3": 26 * 3 + 19 }, 0)
+  .to(word, 6, { "4": 26 * 3 + 5 }, 0)
+  .to(word, 7, { "5": 26 * 3 + 14 }, 0)
+  .to(word, 8, { "6": 26 * 3 + 11 }, 0)
+  .to(word, 9, { "7": 26 * 3 + 8 }, 0)
+  .to(word, 10, { "8": 26 * 3 + 14 }, 0);
+
+update();
+
+function update() {
+  
+  var html = "";
+  
+  for (var i = 0; i < word.length; i++) {    
+    html += letters[Math.round(word[i]) % 26];
+  }
+  
+  view.innerHTML = html;
+}
+

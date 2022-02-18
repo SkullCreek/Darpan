@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Darpan</title>
 </head>
 <body onselectstart="return false;">
@@ -31,10 +32,10 @@
     <!-- menu bar heading start -->
     <div id="menu">
         <ul>
-          <li><a href="">HOME</a></li>
-          <li><a href="">WORK</a></li>
-          <li><a href="">ABOUT ME</a></li>
-          <li><a href="">CONTACT</a></li>
+          <li class="item"><a class="text" href="">HOME</a></li>
+          <li class="item"><a class="text" href="">WORK</a></li>
+          <li class="item"><a class="text" href="">ABOUT ME</a></li>
+          <li class="item"><a class="text" href="">CONTACT</a></li>
         </ul>
     </div>
     <header>
@@ -66,16 +67,16 @@
     </ul> -->
 
     <!-- light dark mode -->
-    <div id="light-dark-mode">
+    <!-- <div id="light-dark-mode">
         <button id="light-dark-mode-btn"><img id="theme-icon" src="img/icons/light.svg" alt="mode"></button>
-    </div>
+    </div> -->
     <!-- light dark mode -->
 
     <!-- main content coding start -->
     <div id="fullpage">
         <!-- Hero section start -->
         <section class="section" id="hero-sec">
-            <aside id="scrollbar-ind">
+            <aside id="scrollbar-ind" style="overflow: hidden;">
               <p>SCROLLDOWN</p>
               <div></div>
             </aside>
@@ -98,7 +99,7 @@
                 <p id="des">Store your playlist, business, contacts, notes.</p>
                 <button>Show me more</button>
               </aside>
-              <aside id="wrk-right"><img src="img/sec/work.jpg" alt=""></aside>
+              <aside id="wrk-right"></aside>
             </div>
             <h1 id="number">01</h1>
         </section>
@@ -112,7 +113,7 @@
                 <p id="des">I have a passion for creating websites with new Technologies.</p>
                 <button>Show me more</button>
               </aside>
-              <aside id="abt-right"><img src="img/sec/aboutme.jpg" alt=""></aside>
+              <aside id="abt-right"></aside>
             </div>
             <h1 id="number">02</h1>
         </section>
@@ -135,7 +136,7 @@ TOGETHER</pre>
                 </p>
                 <button>Show me more</button>
                 </aside>
-                <aside id="col-right"><img src="img/sec/collab.jpg" alt=""></aside>
+                <aside id="col-right"></aside>
             </div>
             <h1 id="number">03</h1>
         </section>
@@ -174,7 +175,7 @@ TOGETHER</pre>
 
         //Scrolling
         css3: true,
-        scrollingSpeed: 700,
+        scrollingSpeed: 1500,
         autoScrolling: true,
         fitToSection: true,
         fitToSectionDelay: 1000,
@@ -196,7 +197,7 @@ TOGETHER</pre>
         scrollOverflow: false,
         scrollOverflowReset: false,
         scrollOverflowOptions: null,
-        touchSensitivity: 15,
+        touchSensitivity: 50,
         bigSectionsDestination: null,
 
         //Accessibility
@@ -230,8 +231,87 @@ TOGETHER</pre>
         lazyLoading: true,
 
         //events
-        onLeave: function(origin, destination, direction){},
-        afterLoad: function(origin, destination, direction){},
+        onLeave: function(origin, destination, direction){
+            
+            if(destination.anchor == "firstPage"){
+                var t101 = gsap.timeline();
+                t101.to("#name", {duration: 1, ease: "back.out(1)", xPercent:0}, 1);
+                t101.to("#portfolio-heading", {duration: 1, ease: "back.out(1)", xPercent:0},"<");
+                t101.to("#scrollbar-ind", {duration:1, y: 0}, "<");
+            }
+            if(origin.anchor == "firstPage"){
+                var t10 = gsap.timeline();
+                t10.to("#name", {duration: 3, xPercent:-100});
+                t10.to("#portfolio-heading", {duration: 3, xPercent:100}, "<");
+                t10.to("#scrollbar-ind", {duration:1, y: 500}, "<");
+            }
+            
+            if(destination.anchor == "secondPage"){
+                var t14 = gsap.timeline();
+                t14.to("#wrk-left h1", {duration: 1, ease: "back.out(1)", yPercent:0}, 1);
+                t14.to("#wrk-left ", {duration: 1, ease: "back.out(1)", xPercent:0}, 1);
+                t14.to("#wrk-right", {duration: 1, ease: "back.out(1)", xPercent:0}, 1.2);
+                t14.to("#number", {duration: 1, ease: "back.out(1)", rotationX: 360, yPercent:0,opacity:1}, 1.2);
+            }
+            if(origin.anchor == "secondPage"){
+                var t114 = gsap.timeline();
+                t114.to("#wrk-left h1", {yPercent:-300},0);
+                // t11.to("#wrk-left button", { xPercent:-100, rotationX: 360},0);
+                t114.to("#wrk-left", { xPercent:-400},0);
+                t114.to("#wrk-right", { xPercent:300}, "<");
+                t114.to("#number", { rotationX: 360, yPercent:100, opacity: 0}, "<");
+            }
+
+            if(destination.anchor == "thirdPage"){
+                var t13 = gsap.timeline();
+                t13.to("#abt-left h1", {duration: 1, ease: "back.out(1)", yPercent:0}, 1);
+                t13.to("#abt-left ", {duration: 1, ease: "back.out(1)", xPercent:0}, 1);
+                t13.to("#abt-right", {duration: 1, ease: "back.out(1)", xPercent:0}, 1.2);
+                t13.to("#number", {duration: 1, ease: "back.out(1)", rotationX: 360, yPercent:0,opacity:1}, 1.2);
+            }
+            if(origin.anchor == "thirdPage"){
+                var t131 = gsap.timeline();
+                t131.to("#abt-left h1", {yPercent:-300},0);
+                // t11.to("#wrk-left button", { xPercent:-100, rotationX: 360},0);
+                t131.to("#abt-left", { xPercent:-400},0);
+                t131.to("#abt-right", { xPercent:300}, "<");
+                t131.to("#number", { rotationX: 360, yPercent:100, opacity: 0}, "<");
+            }
+
+            if(destination.anchor == "forthPage"){
+                var t12 = gsap.timeline();
+                t12.to("#col-left h1", {duration: 1, ease: "back.out(1)", yPercent:0}, 1);
+                t12.to("#col-left ", {duration: 1, ease: "back.out(1)", xPercent:0}, 1);
+                t12.to("#col-right", {duration: 1, ease: "back.out(1)", xPercent:0}, 1.2);
+                t12.to("#number", {duration: 1, ease: "back.out(1)", rotationX: 360, yPercent:0,opacity:1}, 1.2);
+            }
+            if(origin.anchor == "forthPage"){
+                var t121 = gsap.timeline();
+                t121.to("#col-left h1", {yPercent:-300},0);
+                // t11.to("#wrk-left button", { xPercent:-100, rotationX: 360},0);
+                t121.to("#col-left", { xPercent:-400},0);
+                t121.to("#col-right", { xPercent:300}, "<");
+                t121.to("#number", { rotationX: 360, yPercent:100, opacity: 0}, "<");
+            }
+            
+        },
+        afterLoad: function(origin, destination, direction){
+            let black = document.getElementById("black-ball");
+            let white = document.getElementById("white-ball");
+            if(destination.anchor == "firstPage"){
+                black.style.transition = "transform 1s ease-in-out";
+                black.style.transform = `translate(-20%, -3%)`;
+                white.style.transition = "transform 1s ease-in-out";
+                white.style.transform = `translate(46%, 30%)`; 
+            }
+            else if(destination.anchor == "secondPage" || destination.anchor == "thirdPage" || destination.anchor == "forthPage"){
+                black.style.transition = "transform 1s ease-in-out";
+                black.style.transform = `translate(-35%,35%)`;
+                white.style.transition = "transform 1s ease-in-out";
+                white.style.transform = `translate(28%,5%)`;
+            }
+            
+        },
         afterRender: function(){},
         afterResize: function(width, height){},
         afterReBuild: function(){},
@@ -336,8 +416,20 @@ TOGETHER</pre>
         const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
         camera.position.x = 0
         camera.position.y = 0
-        camera.position.z = .92
-        scene.add(camera)
+        
+        function myFunction(x) {
+                if (x.matches) { // If media query matches
+                    camera.position.z = 1.8
+                } 
+                else {
+                    camera.position.z = .92
+                }
+        }
+
+        var x = window.matchMedia("(max-width: 768px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+        scene.add(camera);
 
         // Controls
         // const controls = new OrbitControls(camera, canvas)
@@ -500,7 +592,18 @@ TOGETHER</pre>
         const camera = new THREE.PerspectiveCamera(75, sizes2.width / sizes2.height, 0.1, 100)
         camera.position.x = 0
         camera.position.y = 0
-        camera.position.z = .92
+        function myFunction(x) {
+                if (x.matches) { // If media query matches
+                    camera.position.z = 1.8
+                } 
+                else {
+                    camera.position.z = .92
+                }
+        }
+
+        var x = window.matchMedia("(max-width: 768px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
         scene2.add(camera)
 
         // Controls
