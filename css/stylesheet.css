@@ -748,7 +748,7 @@ li {
             transform: translateY(-50px);
   }
   #hero-sec, #work-sec, #about-sec, #collab-sec {
-    padding: 5.2rem 2.3rem 1.2rem 8.5rem !important;
+    padding: 0 !important;
   }
   #sub-wrk-sec {
     -webkit-box-orient: vertical !important;
@@ -777,6 +777,11 @@ li {
   }
   #sub-abt-sec #abt-left {
     width: 100%;
+  }
+  #fp-nav {
+    -webkit-transform: translate(-3rem) !important;
+            transform: translate(-3rem) !important;
+    margin-left: 0 !important;
   }
   #sub-col-sec {
     -webkit-box-orient: vertical !important;
