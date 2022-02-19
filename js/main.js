@@ -51,6 +51,18 @@ const menu = () => {
         menubar_bottom[0].style.transform = `rotate(-45deg) translateX(34%)`;
         menubar_bottom[0].style.transition = `.2s`;
         social_media[0].style.zIndex = "-1";
+        let buttons = document.getElementsByClassName("item");
+        for(let i=0; i< buttons.length; i++){
+          buttons[i].onclick = () => {
+            menu_sec.style.display = "none";
+            menubar_top[0].style.transform = `rotate(0deg) translate(0%)`;
+            menubar_top[0].style.transition = `.2s`;
+            menubar_bottom[0].style.transform = `rotate(0deg) translateX(0%)`;
+            menubar_bottom[0].style.transition = `.2s`;
+            social_media[0].style.zIndex = "30";
+            menu();
+          }
+        }
         
 
         menu_bar.onclick = () => {
@@ -68,60 +80,6 @@ const menu = () => {
 
 menu();
 
-// const scroll_bg = () => {
-//     let black = document.getElementById("black-ball");
-//     let white = document.getElementById("white-ball");
-//     let body_con = document.getElementById("fullpage");
-//     body_con.onscroll = () => {
-//         // console.log(body_con.scrollTop);
-//         if(body_con.scrollTop >= innerHeight/5){
-//             black.style.transition = "transform 1s ease-in-out";
-//             black.style.transform = `translate(-35%,35%)`;
-//             white.style.transition = "transform 1s ease-in-out";
-//             white.style.transform = `translate(28%,5%)`;
-//         }
-//         else{
-//             black.style.transition = "transform 1s ease-in-out";
-//             black.style.transform = `translate(-20%, -3%)`;
-//             white.style.transition = "transform 1s ease-in-out";
-//             white.style.transform = `translate(46%, 30%)`;
-//         }
-//         let sec_bar = document.getElementById("sec-bar");
-//             let first_bar = document.getElementById("first-bar");
-//         if(body_con.scrollTop >= innerHeight/2){
-//             sec_bar.style.transition = "transform 1s ease-in-out";
-//             sec_bar.style.width = "100%";
-//             first_bar.style.transition = "transform 1s ease-in-out";
-//             first_bar.style.width = "60%";
-//         }
-//         else{
-//             sec_bar.style.transition = "transform 1s ease-in-out";
-//             sec_bar.style.width = "60%";
-//             first_bar.style.transition = "transform 1s ease-in-out";
-//             first_bar.style.width = "100%";
-//         }
-//     }
-// }
-// scroll_bg();
-
-
-// const theme = () => {
-//     let theme_btn = document.getElementById("light-dark-mode-btn");
-//     theme_btn.onclick = () => {
-//         let theme_icon = document.getElementById("theme-icon");
-//         document.documentElement.style.setProperty('--dark', '#ECECEC');
-//         document.documentElement.style.setProperty('--light', '#161313');
-//         theme_icon.src = "img/icons/dark.svg";
-//         let black = document.getElementById("black-ball");
-//         let white = document.getElementById("white-ball");
-//         black.style.transition = "transform 1s ease-in-out";
-//         black.style.transform = `translate(46%, 30%)`;
-//         white.style.transition = "transform 1s ease-in-out";
-//         white.style.transform = `translate(-20%, -3%)`;
-//     }
-// }
-
-// theme();
 
 // mouse tracker
 gsap.set(".ball", {xPercent: -50, yPercent: -50});

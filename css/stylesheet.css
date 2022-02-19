@@ -762,7 +762,7 @@ li {
     margin-bottom: 30px;
   }
   #sub-wrk-sec #wrk-left {
-    width: 100%;
+    width: 70%;
   }
   #sub-abt-sec {
     -webkit-box-orient: vertical !important;
@@ -809,19 +809,23 @@ li {
     bottom: 10rem;
     right: 10rem;
   }
-  #number {
-    display: none;
+  #hero-sec {
+    padding: 1rem !important;
   }
-  #hero-sec, #work-sec, #about-sec, #collab-sec {
+  #work-sec, #about-sec, #collab-sec {
     padding: 0 !important;
   }
   #fp-nav {
-    -webkit-transform: translate(-3rem) !important;
-            transform: translate(-3rem) !important;
+    -webkit-transform: translate(-4rem, -50rem) !important;
+            transform: translate(-4rem, -50rem) !important;
     margin-left: 0 !important;
   }
   .social-media-collab li {
     margin-right: 20px !important;
+  }
+  #name {
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */

@@ -39,7 +39,7 @@
             margin-bottom: 30px;
         }
         #wrk-left{
-            width: 100%;
+            width: 70%;
         }
     }
     #sub-abt-sec{
@@ -81,21 +81,28 @@
         right: 10rem;
     }  
 
-    #number{
-        display: none;
+    // #number{
+    //     display: none;
+    // }
+
+    #hero-sec{
+        padding: 1rem!important;
     }
 
-    #hero-sec, #work-sec, #about-sec, #collab-sec{
+    #work-sec, #about-sec, #collab-sec{
         padding: 0!important;
     } 
     #fp-nav{
-        transform: translate(-3rem)!important;
+        transform: translate(-4rem, -50rem)!important;
         margin-left: 0!important;
     }
     .social-media-collab{
         li{
             margin-right: 20px!important;
         }
+    }
+    #name{
+        transform: translateY(-10rem);
     }
 
 }

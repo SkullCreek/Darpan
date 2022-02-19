@@ -32,10 +32,10 @@
     <!-- menu bar heading start -->
     <div id="menu">
         <ul>
-          <li class="item"><a class="text" href="">HOME</a></li>
-          <li class="item"><a class="text" href="">WORK</a></li>
-          <li class="item"><a class="text" href="">ABOUT ME</a></li>
-          <li class="item"><a class="text" href="">CONTACT</a></li>
+          <li class="item"><a class="text" href="#firstPage">HOME</a></li>
+          <li class="item"><a class="text" href="#secondPage">WORK</a></li>
+          <li class="item"><a class="text" href="#thirdPage">ABOUT ME</a></li>
+          <li class="item"><a class="text" href="#forthPage">CONTACT</a></li>
         </ul>
     </div>
     <header>
@@ -197,7 +197,7 @@ TOGETHER</pre>
         scrollOverflow: false,
         scrollOverflowReset: false,
         scrollOverflowOptions: null,
-        touchSensitivity: 15,
+        touchSensitivity: 30,
         bigSectionsDestination: null,
 
         //Accessibility
@@ -256,7 +256,6 @@ TOGETHER</pre>
             if(origin.anchor == "secondPage"){
                 var t114 = gsap.timeline();
                 t114.to("#wrk-left h1", {yPercent:-300},0);
-                // t11.to("#wrk-left button", { xPercent:-100, rotationX: 360},0);
                 t114.to("#wrk-left", { xPercent:-400},0);
                 t114.to("#wrk-right", { xPercent:300}, "<");
                 t114.to("#number", { rotationX: 360, yPercent:100, opacity: 0}, "<");
@@ -272,7 +271,6 @@ TOGETHER</pre>
             if(origin.anchor == "thirdPage"){
                 var t131 = gsap.timeline();
                 t131.to("#abt-left h1", {yPercent:-300},0);
-                // t11.to("#wrk-left button", { xPercent:-100, rotationX: 360},0);
                 t131.to("#abt-left", { xPercent:-400},0);
                 t131.to("#abt-right", { xPercent:300}, "<");
                 t131.to("#number", { rotationX: 360, yPercent:100, opacity: 0}, "<");
@@ -288,7 +286,6 @@ TOGETHER</pre>
             if(origin.anchor == "forthPage"){
                 var t121 = gsap.timeline();
                 t121.to("#col-left h1", {yPercent:-300},0);
-                // t11.to("#wrk-left button", { xPercent:-100, rotationX: 360},0);
                 t121.to("#col-left", { xPercent:-400},0);
                 t121.to("#col-right", { xPercent:300}, "<");
                 t121.to("#number", { rotationX: 360, yPercent:100, opacity: 0}, "<");
@@ -317,7 +314,8 @@ TOGETHER</pre>
         afterReBuild: function(){},
         afterResponsive: function(isResponsive){},
         afterSlideLoad: function(section, origin, destination, direction){},
-        onSlideLeave: function(section, origin, destination, direction){}
+        onSlideLeave: function(section, origin, destination, direction){
+        }
     });
     </script>
 
