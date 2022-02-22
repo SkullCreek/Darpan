@@ -752,8 +752,11 @@ a {
     -webkit-transform: translateY(-50px);
             transform: translateY(-50px);
   }
-  #hero-sec, #work-sec, #about-sec, #collab-sec {
+  #work-sec, #about-sec, #collab-sec {
     padding: 0 !important;
+  }
+  #hero-sec {
+    padding: 1rem !important;
   }
   #sub-wrk-sec {
     -webkit-box-orient: vertical !important;
@@ -784,8 +787,8 @@ a {
     width: 100%;
   }
   #fp-nav {
-    -webkit-transform: translate(-3rem) !important;
-            transform: translate(-3rem) !important;
+    -webkit-transform: translate(-4rem, -50rem) !important;
+            transform: translate(-4rem, -50rem) !important;
     margin-left: 0 !important;
   }
   #sub-col-sec {
@@ -801,6 +804,13 @@ a {
   }
   #sub-col-sec #col-left {
     width: 100%;
+  }
+  .social-media-collab li {
+    margin-right: 20px !important;
+  }
+  #name {
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
   }
 }
 

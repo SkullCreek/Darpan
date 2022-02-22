@@ -109,6 +109,12 @@ menu();
   var locoScroll = new LocomotiveScroll({
       el: document.querySelector('.scrollContainer'),
       smooth: true,
+      mobile: {
+          smooth: true
+      },
+      tablet: {
+          smooth: true
+      }
       
   });
   locoScroll.on('scroll', (args) => {
@@ -160,7 +166,7 @@ menu();
   gsap.from(".move-up", {duration: 2 , ease: "back.out",y:200, opacity:0, 
     scrollTrigger: {
       trigger: "#img-work",
-      scroller: ".scrollContainer"
+      scroller: ".scrollContainer",
     }
 });
 

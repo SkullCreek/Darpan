@@ -26,9 +26,12 @@
         transform: translateY(-50px);
     }
 
-    #hero-sec, #work-sec, #about-sec, #collab-sec{
+    #work-sec, #about-sec, #collab-sec{
         padding: 0!important;
     } 
+    #hero-sec{
+        padding: 1rem!important;
+    }
 
 
     #sub-wrk-sec{
@@ -54,7 +57,7 @@
         }
     }
     #fp-nav{
-        transform: translate(-3rem)!important;
+        transform: translate(-4rem, -50rem)!important;
         margin-left: 0!important;
     }
     #sub-col-sec{
@@ -68,6 +71,14 @@
             width: 100%;
         }
     }
+    .social-media-collab{
+        li{
+            margin-right: 20px!important;
+        }
+    }
+    #name{
+        transform: translateY(-10rem);
+    }
     
 }
 @media (max-width:380px){
@@ -80,10 +91,6 @@
         bottom: 10rem;
         right: 10rem;
     }  
-
-    // #number{
-    //     display: none;
-    // }
 
     #hero-sec{
         padding: 1rem!important;
