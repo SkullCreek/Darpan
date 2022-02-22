@@ -417,6 +417,10 @@ li {
   padding-bottom: 1rem;
 }
 
+.scrollContainer {
+  overflow-x: hidden;
+}
+
 #development {
   width: 100%;
   padding-bottom: 2rem;
@@ -708,6 +712,7 @@ footer h1 {
   }
   #right-hero {
     width: 100vw !important;
+    height: 60vh !important;
   }
   #hero-sec {
     -webkit-box-orient: vertical;
