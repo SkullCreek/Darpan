@@ -257,7 +257,7 @@ li {
 
 #hero-sec #left-hero button {
   width: 23.3rem;
-  border-radius: 50px;
+  border-radius: 5.0rem;
   padding: 2rem 4rem;
   background-color: var(--Bloosm);
   border: none;
@@ -326,7 +326,7 @@ li {
 }
 
 #back-scroll #scrolldown p {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 #design {
@@ -386,7 +386,6 @@ li {
 #rolling-scroll img {
   width: 100%;
   height: auto;
-  background: #f0f0f0;
   border-radius: 1rem;
 }
 
@@ -471,18 +470,18 @@ li {
   width: 100%;
   padding: 12rem 16rem;
   color: var(--dark);
-  position: relative;
 }
 
 #other-work .size {
   width: 50rem;
+  border-radius: 1rem;
 }
 
 #other-work h1 {
   font-family: 'montserrat';
   font-style: normal;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 5.0rem;
   padding-bottom: 8rem;
 }
 
@@ -502,6 +501,7 @@ li {
 }
 
 #other-work #ow aside {
+  width: 50rem;
   margin-bottom: 8rem;
 }
 
@@ -509,14 +509,14 @@ li {
   font-family: 'montserrat';
   font-style: normal;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 2.8rem;
 }
 
 #other-work #ow p {
   font-family: 'montserrat';
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.8rem;
   padding-top: 0.5rem;
 }
 
@@ -524,7 +524,7 @@ li {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
-  border: 3px solid #9b9b9b;
+  border: .3rem solid #9b9b9b;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -548,6 +548,7 @@ li {
 }
 
 .flex {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -562,6 +563,24 @@ li {
 
 a {
   text-decoration: none;
+  color: var(--light);
+}
+
+footer {
+  width: 100%;
+  padding: 2.1rem 0;
+  display: -ms-grid;
+  display: grid;
+  background-color: var(--dark);
+  place-items: center;
+}
+
+footer h1 {
+  font-family: 'montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: var(--light);
 }
 
 @-webkit-keyframes beat {
@@ -633,6 +652,136 @@ a {
   100% {
     opacity: 0;
     display: none;
+  }
+}
+
+@media (max-width: 1350px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 1230px) {
+  html {
+    font-size: 55%;
+  }
+  #other-work {
+    padding: 12rem 10rem !important;
+  }
+}
+
+@media (max-width: 1064px) {
+  html {
+    font-size: 52%;
+  }
+  #other-work {
+    padding: 12rem 8rem !important;
+  }
+}
+
+@media (max-width: 968px) {
+  html {
+    font-size: 48%;
+  }
+  #other-work {
+    padding: 12rem 4rem !important;
+  }
+}
+
+@media (max-width: 820px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+@media (max-width: 620px) {
+  html {
+    font-size: 40%;
+  }
+  #hero-sec {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #left-hero {
+    width: 100% !important;
+    padding-bottom: 4rem;
+  }
+  #scrolldown {
+    display: none !important;
+  }
+  .social-media {
+    display: none !important;
+  }
+  #design #abt-design {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  #design #abt-design h1 {
+    padding-bottom: 2rem;
+  }
+  #development #abt-dev {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+  #development #abt-dev h1 {
+    padding-bottom: 2rem;
+  }
+  #development #abt-dev p {
+    text-align: center;
+  }
+  #ow {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  #ow #right-ow {
+    -webkit-transform: translateY(0) !important;
+            transform: translateY(0) !important;
+  }
+  #ow aside {
+    width: 100% !important;
+  }
+  #ow .size {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 478px) {
+  section {
+    padding: 0 !important;
+  }
+  #left-hero {
+    width: 60% !important;
+    padding-bottom: 4rem;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+  }
+  #design #abt-design {
+    padding: 10.5rem 0;
+  }
+  #design #abt-design p {
+    padding: 0;
+  }
+  #development #abt-dev {
+    padding: 15.5rem 0;
+  }
+  #development #abt-dev p {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=work.css.map */

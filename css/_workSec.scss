@@ -40,6 +40,7 @@
             color: var(--light);
             cursor: pointer;
         }
+        
         button:hover{
             background-color: #ff9011;
         }
@@ -59,4 +60,8 @@
     right: 6rem;
     font-weight: bold;
     font-size: 20rem;
+}
+a{
+    text-decoration: none;
+    color: var(--light);
 }

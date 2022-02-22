@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="work.css">
+    <link rel="shortcut icon" href="../../favicon.svg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,16 +22,16 @@
     <!-- menu bar heading start -->
     <div id="menu">
         <ul>
-          <li class="item"><a class="text" href="#firstPage">HOME</a></li>
-          <li class="item"><a class="text" href="#secondPage">WORK</a></li>
-          <li class="item"><a class="text" href="#thirdPage">ABOUT ME</a></li>
-          <li class="item"><a class="text" href="#forthPage">CONTACT</a></li>
+          <li class="item"><a class="text" href="../../index.html#firstPage">HOME</a></li>
+          <li class="item"><a class="text" href="../../index.html#secondPage">WORK</a></li>
+          <li class="item"><a class="text" href="../../index.html#thirdPage">ABOUT ME</a></li>
+          <li class="item"><a class="text" href="../../index.html#forthPage">CONTACT</a></li>
         </ul>
     </div>
     <header>
         <ul class="desk-menu">
             <div class="brand-name">
-                <li><a href="#" id="desk-menu-a">DARPAN</a></li>
+                <li><a href="../../index.html#firstPage" id="desk-menu-a">DARPAN</a></li>
             </div>
             <div class="top-right-nav">
                 <div id="menu-bar">
@@ -51,7 +52,7 @@
     <div class="scrollContainer">
         <section id="hero-sec">
             <div id="back-scroll">
-                <a id="back">
+                <a href="../../index.html#work-sec" id="back">
                     <img src="../img/arrow.svg" alt="">
                 </a>
                 <div id="scrolldown">
@@ -64,7 +65,7 @@
                 <h1>SPECFICO</h1>
                 <p id="website">website</p>
                 <p id="des">Store your playlist, business, contacts, notes.</p>
-                <button>Visit</button>
+                <button><a href="https://skullcreek.github.io/specfico/" target="_blank">Visit</a></button>
             </aside>
             <aside id="right-hero"></aside>
         </section>
@@ -111,40 +112,40 @@
             <h1>Other work</h1>
             <div id="ow">
                 <div id="left-ow">
-                    <aside>
-                        <img class="size" src="../img/portfolio-demo.jpg" alt="">
+                    <aside id="img-work" class="move-up">
+                        <img  class="size" src="../img/portfolio-demo.jpg" alt="">
                         <div class="flex">
                             <section>
                                 <h2>Portfolio Template</h2>
                                 <p>This is a template for portfolio.</p>
                             </section>
-                            <a href=""><h6><span class="material-icons">arrow_forward</span></h6></a>
+                            <a href="https://skullcreek.github.io/Portfolio-Demo/" target="_blank"><h6><span class="material-icons">arrow_forward</span></h6></a>
                         </div>
                     </aside>
-                    <aside>
-                        <img class="size" src="../img/portfolio-demo.jpg" alt="">
+                    <aside id="img-work" class="move-up">
+                        <img class="size" src="../img/specfico.jpg" alt="">
+                        <div class="flex">
+                            <section>
+                                <h2>Specfico</h2>
+                                <p style="width: 100%;">Store your playlist, business, contacts, notes and many more.</p>
+                            </section>
+                            <a href="https://skullcreek.github.io/specfico/" target="_blank"><h6><span class="material-icons">arrow_forward</span></h6></a>
+                        </div>
+                    </aside>
+                </div>
+                <div id="right-ow">
+                    <aside id="img-work" class="move-up">
+                        <img class="size" src="../img/portfolio.jpg" alt="">
                         <div class="flex">
                             <section>
                                 <h2>Portfolio</h2>
                                 <p>This is my portfolio.</p>
                             </section>
-                            <a href=""><h6><span class="material-icons">arrow_forward</span></h6></a>
+                            <a href="https://skullcreek.github.io/Darpan/" target="_blank"><h6><span class="material-icons">arrow_forward</span></h6></a>
                         </div>
                     </aside>
-                </div>
-                <div id="right-ow">
-                    <aside>
-                        <img class="size" src="../img/portfolio-demo.jpg" alt="">
-                        <div class="flex">
-                            <section>
-                                <h2>Specfico</h2>
-                                <p>Store your playlist, business, contacts, notes and many more.</p>
-                            </section>
-                            <a href=""><h6><span class="material-icons">arrow_forward</span></h6></a>
-                        </div>
-                    </aside>
-                    <aside>
-                        <img class="size" src="../img/portfolio-demo.jpg" alt="">
+                    <aside id="img-work" class="move-up">
+                        <img class="size" src="../img/blogster.jpg" alt="">
                         <div class="flex">
                             <section>
                                 <h2>Blogster</h2>
@@ -156,6 +157,9 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <h1>© 2020 Darpan. All rights reserved</h1>
+        </footer>
     </div>
 
 
