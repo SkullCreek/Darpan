@@ -157,16 +157,12 @@ menu();
     pinType: document.querySelector(".scrollContainer").style.transform ? "transform" : "fixed"
   });
 
-//   gsap.from(".move-up", {duration: 2 , ease: "back.out",y:200, opacity:0, 
-//     scrollTrigger: {
-//       trigger: "#img-work",
-//       scroller: ".scrollContainer",
-//       // scrub: true,
-//       // pin: true,
-//       // start: "top top",
-//       // end: "+=100%"
-//     }
-// });
+  gsap.from(".move-up", {duration: 2 , ease: "back.out",y:200, opacity:0, 
+    scrollTrigger: {
+      trigger: "#img-work",
+      scroller: ".scrollContainer"
+    }
+});
 
   const images = gsap.utils.toArray('.roller-item');
 

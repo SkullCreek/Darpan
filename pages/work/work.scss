@@ -7,7 +7,7 @@
   }
 
 #loader-con{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: var(--dark);
     position: fixed;
@@ -55,6 +55,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     --left: white;
     --right: #444;
+    overflow-x: hidden;
 }
 
 .ball {
@@ -323,6 +324,7 @@ li{
     left: 0;
     z-index: -1;
     padding-top: 4rem;
+    overflow-x: hidden;
     img {
         width: 100%;
         height: auto;
@@ -554,12 +556,16 @@ footer{
     html{
         font-size: 40%;
     }
+    #right-hero{
+        width: 100vw!important;
+    }
     #hero-sec{
         flex-direction: column-reverse;
     }
     #left-hero{
         width: 100%!important;
         padding-bottom: 4rem;
+        transform: translateX(0)!important;
     }
     #scrolldown{
         display: none!important;
