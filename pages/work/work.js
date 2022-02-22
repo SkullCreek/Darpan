@@ -11,6 +11,8 @@ window.onload = () => {
     t1.to('#loader-con', {display: 'none', duration:0});
 }
 
+
+
 gsap.set(".ball", {xPercent: -50, yPercent: -50});
 
 const ball = document.querySelector(".ball");
@@ -163,12 +165,7 @@ menu();
     pinType: document.querySelector(".scrollContainer").style.transform ? "transform" : "fixed"
   });
 
-  gsap.from(".move-up", {duration: 2 , ease: "back.out",y:200, opacity:0, 
-    scrollTrigger: {
-      trigger: "#img-work",
-      scroller: ".scrollContainer",
-    }
-});
+
 
   const images = gsap.utils.toArray('.roller-item');
 
@@ -195,3 +192,13 @@ menu();
 
   ScrollTrigger.refresh();
 })();
+
+function move(){
+  gsap.fromTo(".move-up", {y:200}, {duration: 2 , ease: "back.out",y:0, 
+  scrollTrigger: {
+    trigger: "#img-work",
+    scroller: ".scrollContainer",
+  }
+});
+}
+move();
