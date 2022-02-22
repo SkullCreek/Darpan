@@ -331,6 +331,7 @@ li {
 }
 
 #design {
+  overflow: hidden;
   width: 100%;
   padding-bottom: 2rem;
   color: var(--dark);
