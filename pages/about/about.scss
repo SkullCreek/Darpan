@@ -353,6 +353,9 @@ footer{
         padding-right: 18rem;
         padding-bottom: 1.7rem;
     }
+    #my-pic-img{
+        width: 50rem;
+    }
 }
 
 #imp-num{
@@ -432,6 +435,86 @@ footer{
         padding-right: 6rem;
         padding-bottom: 4rem;
     }
+    img{
+        width: 50rem;
+    }
+}
+
+#skills{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 8rem 0;
+    text-align: center;
+    h1{
+        font-family: 'montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        color: #18191F;
+        padding-bottom: 6rem;
+    }
+    p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: #707070;
+        padding-bottom: 8rem;
+    }
+    #skills-icon{
+        width: 70%;
+        ul{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            li{
+                width: 6.4rem;
+                margin: 0rem 3.2rem 6.4rem;    
+            }
+        }
+    }
+}
+
+#collaboration{
+    width: 100%;
+    padding: 15rem 11.6rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    #cup{
+        width: 50rem;
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        z-index: -1;
+    }
+    h1{
+        font-family: 'montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        color: #18191F;
+        padding-bottom: 4rem;
+    }
+    p{
+        width: 60%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: #707070;
+        padding-bottom: 4rem;
+    }
+    h5{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 3rem;
+        padding-bottom: 2rem;
+        color: #FF8A00;
+    }
 }
 
 @keyframes beat {
@@ -450,3 +533,145 @@ footer{
     100%{opacity: 0;display: none;}
 }
 
+@media (max-width:1350px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:1230px){
+    html{
+        font-size: 45%;
+    }
+}
+@media (max-width:950px){
+    html{
+        font-size: 40%;
+    }
+}
+
+@media (max-width:896px){
+    html{
+        font-size: 35%;
+    }
+}
+
+@media (max-width:750px){
+    html{
+        font-size: 30%;
+    }
+    #skills{
+        #skills-icon{
+            width: 80%;
+            ul{
+                li{
+                    margin: 0rem 6.2rem 6.4rem;  
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width:658px){
+    html{
+        font-size: 40%;
+    }
+    #right-hero{
+        width: 100vw!important;
+    }
+    #hero-sec{
+        flex-direction: column-reverse;
+    }
+    #left-hero{
+        width: 100%!important;
+        padding-bottom: 4rem;
+        transform: translateX(0)!important;
+    }
+    #scrolldown{
+        display: none!important;
+    }
+    .social-media{
+        display: none!important;
+    }
+
+    #myself{
+        padding: 10.2rem 2rem;
+        flex-direction: column;
+        h1{
+            text-align: center;
+        }
+        p{
+            padding: 0;
+            padding-bottom: 2rem;
+            text-align: justify;
+        }
+        .social-media-2{
+            width: 80%;
+            padding-bottom: 4rem;
+        }
+        #my-pic-img{
+            width: 100%;
+        }
+    }
+    #imp-num{
+        padding: 4rem 1rem;
+        h1{
+            font-size: 4rem;
+        }
+        #num{
+            ul{
+                flex-wrap: wrap;
+                li{
+                    width: 50%;
+                    margin-bottom: 2rem;
+                    h2{
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    #interests{
+        padding: 10.2rem 2rem;
+        img{
+            display: none;
+        }
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+        p{
+            padding-right: 0;
+            width: 100%;
+            text-align: justify;
+        }
+    }
+    #skills{
+
+        h1{
+            font-size: 5rem;
+            padding-bottom: 3rem!important;
+        }
+        #skills-icon{
+            width: 100%;
+            ul{
+                width: 100%;
+                
+                li{
+                    margin: 0rem 6.2rem 6.4rem;  
+                }
+            }
+        }
+    }
+    #collaboration{
+        padding: 15rem 2rem;
+        .social-media-2{
+            width: 80%;
+            padding-bottom: 4rem;
+        }
+        h5{
+            font-size: 2rem;
+        }
+    }
+    
+}
